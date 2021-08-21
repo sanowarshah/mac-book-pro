@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac Book Pro Main</title>
+    <!-- tailwind.css  -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
@@ -15,7 +16,7 @@
         <section class="container">
             <div class="grid grid-cols-2 gap-x-5 p-5 ">
 
-                <div>
+                <div class="p-5">
                     <img src="image/mac.png" alt="">
                 </div>
                 <div class="ml-5 p-5">
@@ -60,27 +61,24 @@
                         </div>
 
 
-                        <table class="mt-20 ">
+                        <table class="mt-20">
 
-                            <tr class="text-xl font-medium border-b mb-4">
+                            <tr class="text-xl font-medium border-b mb-4  justify-between">
                                 <td>Best Price</td>
                                 <td>$ <span id="best-price"> 1299</span></td>
-
-
                             </tr>
-
-                            <tr id="ex-memory-cost" class="text-xl font-medium border-b p-5 ">
+                            <tr class="text-xl font-medium border-b p-5 justify-between ">
                                 <td>Extra Memory Cost</td>
                                 <td>$ <span id="memory-cost">0</span></td>
 
                             </tr>
 
-                            <tr id="ex-storage-cost" class="text-xl font-medium border-b">
+                            <tr class="text-xl font-medium border-b  justify-between">
                                 <td>Extra Stroage Cost</td>
                                 <td>$ <span id="storage-cost">0</span></td>
 
                             </tr>
-                            <tr id="ex-delivery-cost" class="text-xl font-medium border-b-2 border-gray-500">
+                            <tr class="text-xl font-medium border-b-2 border-gray-500">
                                 <td>Delivery Charge</td>
                                 <td>$ <span id="delivery-cost">0</span></td>
 
