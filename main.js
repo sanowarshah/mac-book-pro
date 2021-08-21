@@ -55,19 +55,22 @@ function updateTotal() {
     const parseStorageCost = parseFloat(storageCostText);
     const deliveryCostText = deliveryCharge.innerText;
     const parseDeliveryCost = parseFloat(deliveryCostText);
-    totalPrice.innerText = parseBestPrice + parseMemoryCost + parseStorageCost + parseDeliveryCost;
-    return parseFloat(totalPrice.innerText);
+    const finalTotal = parseBestPrice + parseMemoryCost + parseStorageCost + parseDeliveryCost;
+    totalPrice.innerText = finalTotal
+    const subTotal = document.getElementById('discount-total')
+    subTotal.innerText = finalTotal;
 };
 // Update Promo code
 document.getElementById('promo-button').addEventListener('click', function () {
     const inputNumber = document.getElementById('promo-input');
     const inputValue = inputNumber.value;
 
-    const grandTotal = updateTotal();
-    const discountTotal = document.getElementById('discount-total')
+    const totalPrice = document.getElementById('total-price');
+    const discountTotal = document.getElementById('discount-total');
+    const inTotal = Number(totalPrice.innerText)
     if (inputValue == 'stevekaku') {
-        const discountPrice = (grandTotal / 100) * 20;
-        discountTotal.innerText = grandTotal - discountPrice;
+        const discountPrice = (inTotal / 100) * 20;
+        discountTotal.innerText = inTotal - discountPrice;
     }
     inputNumber.value = '';
 });
